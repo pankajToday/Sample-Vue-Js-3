@@ -2,7 +2,7 @@
     <main class="main"  >
      <!-- Hero Section -->
        <section id="hero" class="hero section dark-background">
-            <img src="/assets/img/hero-bg-2.jpg" alt="" class="hero-bg" />
+            <img :src="assetDir+'/assets/img/hero-bg-2.jpg'" alt="" class="hero-bg" />
 
             <div class="container">
                 <div class="row gy-4 justify-content-between">
@@ -12,9 +12,9 @@
                         data-aos-delay="100"
                     >
                         <img
-                            src="/assets/img/hero-img.png"
+                             :src="assetDir+'/assets/img/hero-img.png'"
                             class="img-fluid animated"
-                            alt=""
+                            alt="img not found"
                         />
                     </div>
 
@@ -474,7 +474,7 @@
                         data-aos-delay="100"
                     >
                         <img
-                            src="/assets/img/details-1.png"
+                            :src="assetDir+'/assets/img/details-1.png'"
                             class="img-fluid"
                             alt=""
                         />
@@ -527,7 +527,7 @@
                         data-aos-delay="200"
                     >
                         <img
-                            src="/assets/img/details-2.png"
+                            :src="assetDir+'/assets/img/details-2.png'"
                             class="img-fluid"
                             alt=""
                         />
@@ -561,7 +561,7 @@
                         data-aos="zoom-out"
                     >
                         <img
-                            src="/assets/img/details-3.png"
+                            :src="assetDir+'/assets/img/details-3.png'"
                             class="img-fluid"
                             alt=""
                         />
@@ -609,7 +609,7 @@
                         data-aos="zoom-out"
                     >
                         <img
-                            src="/assets/img/details-4.png"
+                           :src="assetDir+'/assets/img/details-4.png'"
                             class="img-fluid"
                             alt=""
                         />
@@ -661,7 +661,7 @@
                                 data-gallery="images-gallery"
                             >
                                 <img
-                                    src="/assets/img/gallery/gallery-1.jpg"
+                                    :src="assetDir+'/assets/img/gallery/gallery-1.jpg'"
                                     alt=""
                                     class="img-fluid"
                                 />
@@ -678,7 +678,7 @@
                                 data-gallery="images-gallery"
                             >
                                 <img
-                                    src="/assets/img/gallery/gallery-2.jpg"
+                                    :src="assetDir+'/assets/img/gallery/gallery-2.jpg'"
                                     alt=""
                                     class="img-fluid"
                                 />
@@ -695,7 +695,7 @@
                                 data-gallery="images-gallery"
                             >
                                 <img
-                                    src="/assets/img/gallery/gallery-3.jpg"
+                                    :src="assetDir+'/assets/img/gallery/gallery-3.jpg'"
                                     alt=""
                                     class="img-fluid"
                                 />
@@ -712,7 +712,7 @@
                                 data-gallery="images-gallery"
                             >
                                 <img
-                                    src="/assets/img/gallery/gallery-4.jpg"
+                                    :src="assetDir+'/assets/img/gallery/gallery-4.jpg'"
                                     alt=""
                                     class="img-fluid"
                                 />
@@ -729,7 +729,7 @@
                                 data-gallery="images-gallery"
                             >
                                 <img
-                                    src="/assets/img/gallery/gallery-5.jpg"
+                                    :src="assetDir+'/assets/img/gallery/gallery-5.jpg'"
                                     alt=""
                                     class="img-fluid"
                                 />
@@ -746,7 +746,7 @@
                                 data-gallery="images-gallery"
                             >
                                 <img
-                                    src="/assets/img/gallery/gallery-6.jpg"
+                                    :src="assetDir+'/img/gallery/gallery-6.jpg'"
                                     alt=""
                                     class="img-fluid"
                                 />
@@ -763,7 +763,7 @@
                                 data-gallery="images-gallery"
                             >
                                 <img
-                                    src="/assets/img/gallery/gallery-7.jpg"
+                                    :src="assetDir+'/assets/img/gallery/gallery-7.jpg'"
                                     alt=""
                                     class="img-fluid"
                                 />
@@ -780,7 +780,7 @@
                                 data-gallery="images-gallery"
                             >
                                 <img
-                                    src="/assets/img/gallery/gallery-8.jpg"
+                                    :src="assetDir+'/assets/img/gallery/gallery-8.jpg'"
                                     alt=""
                                     class="img-fluid"
                                 />
@@ -817,7 +817,7 @@
                         <div class="member">
                             <div class="pic">
                                 <img
-                                    src="/assets/img/team/team-1.jpg"
+                                    :src="assetDir+'/assets/img/team/team-1.jpg'"
                                     class="img-fluid"
                                     alt=""
                                 />
@@ -852,7 +852,7 @@
                         <div class="member">
                             <div class="pic">
                                 <img
-                                    src="/assets/img/team/team-2.jpg"
+                                    :src="assetDir+'/assets/img/team/team-2.jpg'"
                                     class="img-fluid"
                                     alt=""
                                 />
@@ -887,7 +887,7 @@
                         <div class="member">
                             <div class="pic">
                                 <img
-                                    src="/assets/img/team/team-3.jpg"
+                                    :src="assetDir+'/assets/img/team/team-3.jpg'"
                                     class="img-fluid"
                                     alt=""
                                 />
@@ -1354,20 +1354,18 @@ export default {
     components: {  },
     data() {
         return {
-
+            assetDir:  import.meta.env.VITE_ASSET_DIR
         };
     },
     methods: {},
-    created() {
-
-    },
+    created() { },
     watch: {
         /*'duration_visitor':{
         handler: 'orderGraph'
     },*/
     },
-    onmount(){
-        console.log( "on mount done" );
+    mounted(){
+      
     }
 };
 </script>
